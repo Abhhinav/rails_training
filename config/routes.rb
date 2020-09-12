@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  get 'tags/index'
+  resources :posts
   resources :categories
   resources :tags
-
-  get 'category/index'
-  get 'category/show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   #contollrename/actionname
   # in root route contollrename#actionname
