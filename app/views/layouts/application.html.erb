@@ -15,8 +15,11 @@
       <%= render partial: "layouts/topmenu" %>
         <p id="notice"><%= notice %></p> 
       <div class="row">
-        <div class="col-md-9">   
+        <div class="col-md-9"> 
           <%= yield %>
+          <% if @posts %>
+          <%= render "layouts/posts", posts: @posts %> 
+          <% end %>  
         </div>
         <div class="col-md-3">
           <% if @categories %>

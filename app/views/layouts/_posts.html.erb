@@ -1,0 +1,14 @@
+<% posts.each do |post| %>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h3><%= post.title%></h3>
+            <div>
+            <%= post.body.truncate(300) %>
+            </div>
+        </div> 
+        <div class = "card-footer">
+            <h6>Published <%= time_ago_in_words(post.created_at) %></h6>
+            <%= link_to 'Read more...', post_read_path(post)%>
+        </div>
+    </div> 
+<% end %>
